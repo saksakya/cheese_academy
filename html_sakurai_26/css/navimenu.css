@@ -1,0 +1,96 @@
+/* このファイルには、ナビメニューの設定を記述 */
+
+/* メニュー(ヘッダー)をトップに固定＆書式設定 */
+#header{
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    /* ヘッダーを上部へ固定する */
+    position: sticky;
+    top: 0;
+    /* ヘッダーの表示優先度を上げる */
+    z-index: 10000;
+}
+
+/* ヘッダーメニュー設定 */
+.hemenu{
+    display: flex;
+    /* 縦位置真ん中へ */
+    align-items: center;
+}
+
+/* ロゴの左右マージン設定 */
+.menulogo{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+/* ロゴの大きさ指定 */
+.menulogo img{
+    width:210px;
+    height:auto;
+}
+
+/* メニューのマージン設定 */
+.navmenulist{
+    display: flex;
+    text-align: center;
+    /* menu項目にpadding20px追加したため、50px-20px=30px */
+    /* 文字の間隔 */
+    column-gap: 20px;
+    /* メニューの位置 */
+    position:fixed;
+    top:7px;
+    right: 100px;
+} 
+
+.navItem{
+    width:100px;
+    height:auto;
+}
+
+
+/* 擬似要素でメニューの下にテキストを表示 */
+.navItem a::after {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 6px;
+    font-weight: normal;
+}
+
+.navItemAbout a::after {
+    content: "職人養成";
+}
+
+.navItemCourse a::after {
+    content: "カリキュラム";
+}
+
+.navItemNews a::after {
+    content: "ニュース";
+}
+
+.navItemAccess a::after {
+    content: "会社情報";
+}
+
+.navItemContact a::after {
+    content: "お問い合わせ";
+}
+
+/* メニューカーソルに合わせた際のリンクを大きくするためpadding追加 */
+.navItem a{
+    display: block;
+    padding: 10px;
+}
+
+/* ボタン上にカーソルを合わせたときに色変更 */
+.navItem a:hover{
+    background-color: cornflowerblue;
+    color: white;
+}
+
+

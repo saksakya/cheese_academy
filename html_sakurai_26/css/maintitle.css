@@ -1,0 +1,271 @@
+
+/* このファイルには、メインページのタイトル部分のアニメーションの設定を記述 */
+
+.main-title{
+    display:flex;
+    position:relative;
+    margin-left:  max(10%, 50px);
+    margin-top: 100px;
+}
+
+.main-title img{
+    width:100%;
+    height:auto;
+    max-width:1000px
+}
+
+.main-title-ch{
+    flex-basis:780px;
+    z-index:100;
+}
+
+/* タイトルの基本フォント */
+h5{
+    font-size: 100px;
+    font-weight: bold;
+    color:#0070b3;;
+    /* 文字の縦横比を変更（表示位置ずれないように左基準で） */
+    transform-origin: left;
+    transform   : scale(0.8, 1);
+    mix-blend-mode: color-burn;
+    /* 縁取り */
+    text-shadow:
+    2px 2px #0070b3,
+    -2px 2px #0070b3,
+    -2px -2px #0070b3,
+    2px -2px #0070b3,
+    2px 0px #0070b3,
+    0px 2px #0070b3,
+    -2px 0px #0070b3,
+    0px -2px #0070b3;
+}
+
+.pos-rel{
+    position:relative;
+}
+
+/* helloアニメーション */
+.main-title-anime1{
+    /* 一旦非表示 */
+    width:0;
+    overflow:hidden;
+    /* この名前の設定を下で詳しく記述 */
+    animation-name: mta1;
+    /* フェイドインの時間 */
+    animation-duration: 1s;
+    animation-delay:1s;
+    white-space: nowrap;
+    animation-fill-mode: forwards;
+}
+
+/* 左から右へ出現して消える */
+@keyframes mta1 {
+    0%{
+        width: 0%;
+    }
+    50%{
+        width: 50%;
+    }
+    100%{
+        width:0%;
+    }
+}
+
+/* アニメーションのために、同じ文字を被せる */
+.main-title-anime2{
+    position:absolute;
+    color:white;
+    top:0;
+    left:0;
+    /* 一旦非表示 */
+    opacity: 0;
+    overflow:hidden;
+    /* この名前の設定を下で詳しく記述 */
+    animation-name: mta2;
+    /* フェイドインの時間 */
+    animation-duration: 0s;
+    animation-delay:1.5s;
+    white-space: nowrap;
+    animation-fill-mode: forwards;
+}
+
+/* 重なり文字が出現 */
+@keyframes mta2 {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+        z-index:0;
+    }
+}
+
+.main-title-anime3{
+    margin-top: 5px;
+    /* 一旦非表示 */
+    width:0;
+    overflow:hidden;
+    /* この名前の設定を下で詳しく記述 */
+    animation-name: mta3;
+    /* フェイドインの時間 */
+    animation-duration: 0.5s;
+    animation-delay:2s;
+    white-space: nowrap;
+    animation-fill-mode: forwards;
+}
+
+/* 左から右へ出現 */
+@keyframes mta3 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:100%;
+    }
+}
+
+/* アニメ4部分のフォント */
+.CSanime-font{
+    font-size: 100px;
+    font-weight: bold;
+    display : table;
+    /* 文字の縦横比を変更（表示位置ずれないように左基準で） */
+    transform-origin: left;
+    transform   : scale(0.8, 1);
+    margin-top: 5px;
+    color: #ffd61a;
+    text-shadow:
+    .5px .5px #ffd61a,
+    -1px 1px #ffd61a,
+    -1px -1px #ffd61a,
+    1px -1px #ffd61a,
+    1px 0px #ffd61a,
+    0px 1px #ffd61a,
+    -1px 0px #ffd61a,
+    0px -1px #ffd61a;
+}
+
+/* １文字ずつ時間ずらして表現 */
+.main-title-anime4{
+    /* 一旦非表示 */
+    opacity: 0;
+    --easeOutCubic: cubic-bezier(0.33, 1, 0.68, 1);
+    display: inline-block;
+    /* ここのアニメ表現はブラックボックス(理解度50%) */
+    transform-origin: 50% 100%;
+    animation-name: popupScale, popupMove;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.3, 3, 0.64, 1), var(--easeOutCubic);
+    animation-delay: calc(2.5s + 0.05s * var(--index)),
+    calc(2.5s + 0.05s * var(--index));
+    animation-fill-mode: forwards;
+}
+
+/* 最新のtranslate記述方法(後で知ったのでここだけ) */
+@keyframes popupScale {
+    0% {
+        scale: 0.7 0.7;    
+    }
+        
+    100% {
+        scale: 1 1;
+    }
+}
+
+@keyframes popupMove {
+    0% {
+        translate: 0 100%;
+        opacity: 0;
+    }
+
+    100% {
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
+.main-title-anime5{
+    /* 一旦非表示 */
+    opacity:0;
+    overflow:hidden;
+    /* この名前の設定を下で詳しく記述 */
+    animation-name: mta4;
+    /* フェイドインの時間 */
+    animation-duration: 0.5s;
+    animation-delay:3.5s;
+    white-space: nowrap;
+    animation-fill-mode: forwards;
+} 
+
+/* 上から下へ出現 */
+@keyframes mta4 {
+    0%{
+        transform: translateY(-10%);/* 要素を上の枠外に移動*/
+        opacity:0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity:1;
+    }
+}
+
+.main-title img{
+    width: 70%;
+    max-width:600px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index:50;
+    /* 一旦非表示 */
+    opacity:0;
+    overflow:hidden;
+    /* この名前の設定を下で詳しく記述 */
+    animation-name: mta5;
+    /* フェイドインの時間 */
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    z-index:50;
+}
+
+@keyframes mta5 {
+    0%{
+        transform: translate(100%,-50%);/* 要素を上の枠外に移動*/
+    }
+    35%{
+        transform: translate(0%,-50%);
+        opacity:0.5;
+    }
+    50%{
+        transform: translate(20%,-50%);
+        opacity:0.5;
+    }
+    65%{
+        transform: translate(0%,-50%);
+        opacity:0.5;
+    }
+    100%{
+        transform: translate(20%,-50%);
+        opacity:1;
+    }
+}
+
+.main-diago-div{
+    position:relative;
+}
+
+/* 背景に斜線を入れる */
+.diagonal-line{ 
+    position:absolute;
+    z-index:20;
+    bottom:-50px;
+    width:100%;
+    height:290px;
+    background:repeating-linear-gradient(
+    -70deg,
+    #F2F2F2,
+    #F2F2F2 1px,
+    white 0,
+    white 10px
+    );
+} 

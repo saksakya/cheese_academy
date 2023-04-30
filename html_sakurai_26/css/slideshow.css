@@ -1,0 +1,83 @@
+/* このファイルにはのスライドショー・文字のフェイドインの設定を記述 */
+
+/* スライドショーの書式設定 */
+#slideshow1{
+    /* 画面真ん中へ */
+    margin-left: auto;
+    margin-right: auto;
+
+    width:auto;
+    /* height:calc(100vh - 121px); */
+    height: calc(var(--vh, 1vh) * 100 - 60px);
+}
+
+#slideshow2{
+    /* 画面真ん中へ */
+    margin-left: auto;
+    margin-right: auto;
+
+    width:auto;
+    /* height:calc(100vh - 121px); */
+    height: calc(var(--vh, 1vh) * 100 - 60px);
+}
+
+/* フェイドインアニメの設定 */
+.popout {
+    /* 初期は何も表示しない。 */
+    opacity: 0;
+    /* この名前の設定を下で詳しく記述 */
+    animation-name: fadeIn;
+    /* フェイドインの時間 */
+    animation-duration: 30s;
+    animation-timing-function: ease;
+    /* 無限ループ */
+    animation-iteration-count:infinite;
+}
+
+.popout2 {
+    /* 初期は何も表示しない。 */
+    opacity: 0;
+    /* この名前の設定を下で詳しく記述 */
+    animation-name: fadeIn;
+    /* フェイドインの時間 */
+    animation-duration: 30s;
+    /* 交互になるように、ディレイを設定 */
+    animation-delay:10s;
+    animation-timing-function: ease;
+    /* 無限ループ */
+    animation-iteration-count:infinite;
+}
+
+.popout3 {
+    /* 初期は何も表示しない。 */
+    opacity: 0;
+    /* この名前の設定を下で詳しく記述 */
+    animation-name: fadeIn;
+    /* フェイドインの時間 */
+    animation-duration: 30s;
+    /* 交互になるように、ディレイを設定 */
+    animation-delay:20s;
+    animation-timing-function: ease;
+    /* 無限ループ */
+    animation-iteration-count:infinite;
+}
+
+/* フェイドインしながら、下から上へ動かすアニメ */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        /* transform: translateY(30px); */
+    }
+    10%{
+        opacity: 1;
+    }
+    33.3% {
+        opacity: 1;
+    }
+    33.4% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}

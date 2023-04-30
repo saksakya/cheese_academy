@@ -1,0 +1,134 @@
+<!-- CONTACTページ -->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>チーズアカデミー</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/inquiry.css">
+  <link rel="stylesheet" href="./css/stsetting.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/slideshow.css">
+  <link rel="stylesheet" href="./css/banner.css">
+  <link rel="stylesheet" href="./css/navimenu.css">
+  <link rel="stylesheet" href="./css/menubtn.css">
+  <link rel="stylesheet" href="./css/maintitle.css">
+  <link rel="stylesheet" href="./vegas/vegas.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./vegas/vegas.min.js"></script>
+</head>
+
+<body>
+  <!-- ナビゲータ -->
+  <header id="header">
+    <!-- メニュー設定 -->
+    <div class="hemenu">
+      <figure class="menulogo">
+        <a href="./index.html"><img src="./img/header_logo.png" alt="cheese ACADEMY TOKYO"></figure></a>
+      <ul class="navmenulist">
+        <li class="navItem navItemAbout"><a>ABOUT</a></li>
+        <li class="navItem navItemCourse"> <a href="./course.html">COURSE</a></li>
+        <li class="navItem navItemNews"><a href="#news">NEWS</a></li>
+        <li class="navItem navItemAccess"><a href="./access.html">ACCESS</a></li>
+        <li class="navItem navItemContact"><a href="./contact.html">CONTACT</a></li>
+      </ul>
+      <div>
+        <input type="checkbox" id="menu-btn-check">
+        <label for="menu-btn-check" class="menu-btn"><span></span></label>
+      
+      <!--ここからメニュー-->
+        <div class="menu-content">
+          <ul>
+            <li class="menu-item navItemAbout"><a>ABOUT</a></li>
+            <li class="menu-item navItemCourse"> <a href="./course.html">COURSE</a></li>
+            <li class="menu-item navItemNews"><a href="#news">NEWS</a></li>
+            <li class="menu-item navItemAccess"><a href="./access.html">ACCESS</a></li>
+            <li class="menu-item navItemContact"><a href="./contact.html">CONTACT</a></li>
+            <li class="menu-item"><a href="./index.html">HOME</a></li>
+            <li class="menu-item"><a href="./index2.html">おまけ(ver.2)</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--ここまでメニュー -->
+      </div>
+  </header>
+
+  <main>
+    <div class="main-text">
+      <h4 id= "contact" class="mt60">Contact</h4>
+      <h3 class="mt30">説明会お申し込み・お問い合わせ</h3>
+      
+      
+      <p class="mt60">ぜひ1度、足を運んでみませんか。説明会は随時開催中。<br>
+        その他、お問い合わせもお気軽にどうぞ。お待ちしております。</p>
+      
+      <p class="mt30">※チーズアカデミーは実際には存在しません。<br>
+      間違っても問い合わせしないようお願いいたします。</p>
+
+      <form action="">
+        <table class="contable">
+          <tr>
+            <th class="conth">名前</th>
+            <td class="contd">
+              <input type="text" name="名前" class="conform-text"> 
+            </td>
+          </tr>
+          <tr>
+            <th class="conth">カナ</th>
+            <td class="contd">
+              <input type="text" name="カナ" class="conform-text"> 
+            </td>
+          </tr>
+          <tr>
+            <th class="conth">メールアドレス</th>
+            <td class="contd">
+              <input type="e-mail" name="メールアドレス" class="conform-text"> 
+            </td>
+          </tr>
+          <tr>
+            <th class="conth">チーズアカデミーを<br>知ったきっかけ</th>
+              <td class="contd">
+                <select name="htkc" class="conform-text">
+                  <option value="">選択してください。</option>
+                  <option value="google">google検索</option>
+                  <option value="sns">SNS</option>
+                  <option value="introduce">紹介</option>
+                  <option value="unexpected">たまたま通りかかった</option>
+                  <option value="other">その他</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+            <th class="conth">志望動機</th>
+            <td class="contd">
+              <p><input type="checkbox" name="rfa" value="stb">起業をしたい</input></p>
+              <p><input type="checkbox" name="rfa" value="cach">チーズ系企業に就職・転職したい</input></p>
+              <p><input type="checkbox" name="rfa" value="fwork">チーズと関わる仕事をしており、仕事に生かしたい</input></p>
+              <p><input type="checkbox" name="rfa" value="edu">チーズの教養を身につけたい</input></p>
+            </td>
+          </tr>
+          <tr>
+            <th class="conth">詳細</th>
+            <td class="contd">
+              <textarea name="detail" class="conform-textarea"></textarea>
+            </td>
+          </tr>
+        </table>
+        
+        <input type="submit" value="送信" class="button mt30 mb140">
+
+      </form>
+    </div>
+  </main>  
+
+<footer id="footer">
+  <div>copyrights 2016 Cheeese Academy Tokyo All RIghts Reserved.</div>
+</footer>
+
+</body>
+</html>

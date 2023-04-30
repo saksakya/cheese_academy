@@ -1,0 +1,255 @@
+/* このファイルには、本文の記述の設定を記述(後でファイルを分けたため別ページ分も記載) */
+
+/* 横スクロールバーを消す */
+#overflow{
+    overflow:hidden;
+}
+
+/* メイン文章の基本のフォント設定 */
+.main-text{
+    font-size: 16px;
+    text-align: center;
+    line-height: 25px;
+    color: black;
+}
+
+/* 見出し2のフォント設定 */
+h2{
+    font-size: 24px;
+    font-weight: bold;
+    color:#ffd61a;
+}
+/* 見出し3のフォント設定 */
+h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 見出し4のフォント設定 */
+h4{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 4連結の画像横並び */
+.img4c{
+    display: flex;
+    /* コンテナ内での中央揃え */
+    justify-content: center;
+    /* 全体での中央揃え */
+    margin-left:auto;
+    margin-right:auto;
+    /* 最大幅設定 */
+    max-width: 1200px;
+}
+
+/* 4連結画像の大きさ自動調整 */
+.img4c img{
+    width:100%;
+    height:auto;
+}
+
+/* 画像+説明文の設定 */
+.iandd{
+    display: flex;
+    background-color: #fafafa;
+    max-width: 1200px;
+    margin-left:auto;
+    margin-right:auto;
+    /* 縦位置を真ん中へ調整 */
+    align-items: center;
+}
+
+/* 文章の左寄せ、幅、マージンの設定 */
+.imdis{
+    flex: 1;
+    text-align: left;
+    max-width: 500px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.iandd img{
+    flex: 1;
+    max-width: 600px;
+    width:100%;
+    height:auto;
+}
+
+/* ニュース */
+.news{
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+/* 個別ニュースの幅設定、左寄せ */
+.newsdetail{
+    text-align: left;
+    max-width: 300px;
+}
+
+/* ボタンの書式 */
+.button{
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+    width: 300px;
+    height: 60px;
+    /* margin:60 auto; だと何故か上手くいかない */
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: #ffd61a;
+    /* ボタン丸形 */
+    font-size: 18px;
+    border-radius:10px;
+    /* カーソル変更 */
+    cursor: pointer;
+    border: none;
+}
+
+/* ボタン上にカーソルを合わせたときに色変更 */
+.button:hover{
+    background-color: cornflowerblue;
+}
+
+/* アクセスの表示 */
+.Access{
+    background-color: #fafafa;
+    margin-top: 60px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:30px;
+    padding-bottom: 30px;
+    max-width: 1200px;
+}
+
+/* 地図のサイズ自動調整 */
+.Access img{
+    width:100%;
+    height:auto;
+    max-width: 1000px;
+}
+
+/* contact用のテーブル専用の設定 */
+.contable{
+    margin-top: 70px;
+    /* 上下線の太さ・色・線種指定 */
+    border-style: solid;
+    border-top-width: 3px;
+    border-bottom-width:3px;
+    border-color: #bfbfbf;
+}
+
+/* contact用のテーブル見出しの書式設定 */
+.conth{
+    padding-left: 8px;
+    padding-right: 64px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-style: solid;
+    border-top-width: 1px;
+    border-bottom-width:1px;
+    border-right-width: 1px;
+    border-color: #bfbfbf;
+    vertical-align: middle;
+}
+
+/* contact用のテーブル要素の書式設定 */
+.contd{
+    padding-left: 16px;
+    padding-right: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-style: solid;
+    border-top-width: 1px;
+    border-bottom-width:1px;
+    border-color: #bfbfbf;
+    vertical-align: middle;
+}
+
+/* contact用のテキストボックスの書式設定 */
+.conform-text{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    max-width: 600px;
+    /* これを入れないと、テキストボックスが枠線からはみ出る。 */
+    box-sizing: border-box;
+}
+
+/* contact用のテキストボックス(複数行)の書式設定 */
+.conform-textarea {
+    width: 100%;
+    padding: 10px;
+    height: 150px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    max-width: 600px;
+    /* これを入れないと、テキストボックスが枠線からはみ出る。 */
+    box-sizing: border-box;
+}
+
+/* リンクボタンの書式設定 */
+.link-btn{
+    /* 基本的なサイズの設定 */
+    position:relative;
+    background-color: white;
+    width:250px;
+    height:60px;
+    /* 真ん中寄せ*/
+    margin-left: auto;
+    margin-right: auto;
+    /* 枠線を太さ1pxで表示 */
+    border-color: cornflowerblue;
+    color: cornflowerblue;
+    font-weight: bold;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.link-btn a{
+    display: block;
+	position: absolute;
+    line-height: 65px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    box-sizing:border-box 
+}
+
+/* 疑似要素でリンクマークを記述 */
+.link-btn a::before {
+    content: "";
+    width:8px;
+    height: 8px;
+    border-top: solid 2px cornflowerblue;
+    border-right: solid 2px cornflowerblue;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 20px;
+    top: 26px;
+}
+
+/* リンクボタンにホバーした際の表記 */
+.link-btn:hover{
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.link-btn a:hover::before{
+    border-color:white;
+}
+
+/* フッターの書式設定 */
+#footer{
+    background-color: #707070;
+    color: white; 
+    text-align: center;
+    font-size: 16px;
+    padding-top:30px;
+    padding-bottom: 30px;
+}
